@@ -1,0 +1,21 @@
+* {
+    background-color: #202224;
+}
+
+.logo {
+    color: #bd994b;
+}
+
+.titulos {
+    color: #ddd2c4;
+    font-size: large;
+}
+
+.card{
+    border:0px
+}
+
+.galeria{
+    width: 100%;
+    margin: 0 auto;
+}
