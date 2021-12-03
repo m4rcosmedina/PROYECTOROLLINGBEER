@@ -15,13 +15,11 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container">
-            <h1 class="logo">ROLLINGBEER </h1>
-
-            <a class="navbar-brand" href="../index.html">
-              <img src="" alt=""  />
-            </a>
-          
+        <div class="container">
+          <a href="../index.html"> <img src="../img/LogoPrueba.jpeg" height="140px"></a>         
+          <a class="navbar-brand" href="../index.html">
+            <img src="" alt=""  />
+          </a>          
             <button
               class="navbar-toggler"
               type="button"
@@ -52,7 +50,55 @@
           </div>
         </nav>
   </header>
-    <main class="container" >        
+  <main >
+    <section class="container">
+      <h1 class="display-2 text-center text-white pt-5">Contacto</h1>
+      <hr />
+      <article class="row">
+        <div class="col-sm-12 col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="nombreApellido" class="form-label text-white">Nombre y apellido*</label>
+              <input type="text" class="form-control" id="nombreApellido" placeholder="Emi Arias" required
+                minlength="3" maxlength="35" />
+            </div>
+            <div class="mb-3">
+              <label for="País" class="form-label text-white">País*</label>
+              <input type="text" class="form-control" id="País" placeholder="Argentina" required
+                minlength="3" maxlength="35" />
+            </div>
+            <div class="mb-3">
+              <label for="Teléfono" class="form-label text-white">Teléfono*</label>
+              <input type="number" class="form-control" id="Teléfono" placeholder="43539620" required
+                minlength="3" maxlength="35" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label text-white">Email*</label>
+              <input type="email" class="form-control" id="email" placeholder="earias@gmail.com" required
+                maxlength="100" />
+            </div>
+            <div class="mb-3">
+              <label for="" class="for-label">Consulta*</label>
+              <textarea name="" id="consulta" rows="4" class="form-control" placeholder="agregá tu mensaje aqui.."
+                required maxlength="250"></textarea>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input my-4" type="checkbox" value="" id="invalidCheck3"
+                aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label text-white my-4" for="invalidCheck3">
+                Estoy de acuerdo con los términos y condiciones.
+              </label>
+            </div>            
+            <button class="btn btn-primary mb-3" type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.102370777519!2d-65.209390485296!3d-26.836696096500955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1638571420780!5m2!1ses-419!2sar "
+            class="w-100" height="480" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </article>
+    </section>
     </main>
 <!--footer-->
 <footer class="container-fluid bg-dark">
