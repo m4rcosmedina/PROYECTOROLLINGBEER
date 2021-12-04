@@ -1,6 +1,4 @@
-* {
-    background-color: #202224;
-}
+
 
 .logo {
     color: #bd994b;
@@ -65,3 +63,8 @@
   button {
       background-color:#ddd2c4;
   }
+
+  
+.tipoDeTitulos {
+  font-family: Arial, sans-serif, Helvetica;
+}

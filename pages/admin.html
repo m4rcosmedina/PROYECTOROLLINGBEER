@@ -8,7 +8,7 @@
     <meta name="author" content="Marta Arriola, Giuliano Carbone, Marcos Medina, Alfredo Ruiz y Mariano Meik" />
     <meta  name="keywords" content="estilos de cerveza artesanal, descripciones"/>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <script src="https://kit.fontawesome.com/e304c7dec7.js" crossorigin="anonymous"></script>
     <title>Proyecto 2 - RollingBeer</title>
   </head>
@@ -39,20 +39,96 @@
                   <a class="nav-link " aria-current="page" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="admin.html">Administración</a>
+                  <a class="nav-link active " href="admin.html">Administración</a>
                 </li> 
                 <li class="nav-item">
                   <a class="nav-link " href="nosotros.html">Acerca de Nosotros</a>
                 </li>
                   <li class="nav-item">
-                    <a class="nav-link  text-light" href="contacto.html">Contacto</a>
+                    <a class="nav-link " href="contacto.html">Contacto</a>
                   </li>
               </ul>             
             </div>
           </div>
         </nav>
   </header>
-    <main class="container" >        
+    <main class="container-fluid " >   
+      <section class="container  ">
+        <h1 class="display-3 text-center tipoDeTitulos ">Carga Tu Producto</h1>
+        <hr />
+        <form id='formProducto' class=""  >
+          <div class="mb-3">
+            <label for="codigo" class="form-label">Codigo</label>
+            <input
+              type="number"
+              class="form-control"
+              id="codigo"
+              disabled
+              
+              
+            />
+            <div class="invalid-feedback">
+              Debe ingresar un codigo alfanumerico
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="producto" class="form-label ">Producto</label>
+            <input
+              type="text"
+              class="form-control  "
+              id="producto"
+              placeholder="Ej. Nombre del Producto"
+              maxlength="20"
+              minlength="5"
+              
+            />
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea id="descripcion" rows="3" class="form-control" maxlength="100" minlength="10"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id="url"
+              placeholder="http://127.0.0.1:5500/img.jpg"
+              
+            />
+          </div>
+          <button class="btn btn-success" type="submit" id="btnsumit">Guardar Producto</button>
+
+        </form>
+        <div class="alert alert-danger my-5 d-none" role="alert" id='msjAlerta'>
+          Debe completar todos los campos
+        </div>
+      </section>
+      <section class="container">
+        <h2 class="display-3 text-center tipoDeTitulos ">Productos En Venta</h2>
+        <hr>
+        <button class="btn btn-primary" id="nuevopro" >Nueva Carga</button>
+       <button class="btn btn-secondary">Cargar datos de prueba</button>
+        <div class="table-responsive">
+            <table class="table my-5  ">
+              <thead>
+                <tr>
+                  <th  scope="col">Cod.</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">URL</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tablaproductos">
+                 
+              </tbody>
+            </table>
+  
+        </div>
+      </section>  
+      
     </main>
 <!--footer-->
 <footer class="container-fluid bg-dark">
@@ -91,6 +167,7 @@
       </div>
     </article>
   </section>
+  
 </footer>
     <!-- JavaScript  -->    
     <script src="../js/bootstrap.min.js"></script>
