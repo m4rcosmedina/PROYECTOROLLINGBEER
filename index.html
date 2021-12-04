@@ -78,17 +78,12 @@
     <section class="my-1 ">
       <!--<h1 class="display-2 text-center pt-5"> Conocé nuestros estilos</h1> -->
     </section>
-
-
-
-
-
-
-    <section class="galeria shadow py-5 container-fluid justify-content-center">
+    <section class="galeria shadow py-5 container-fluid justify-content-center" >
       <article class="row">
         <div class=" col-12 col-md-5 col-lg-3">
           <div class="card" style="width: 102%;">
-            <a href=""> <img src="img/ALFREDRGB.jpg" class="card-img-top" alt="imagen prueba"> </a>
+            <img src="img/ALFREDRGB.jpg" class="card-img-top"  alt="imagen prueba" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo"> 
           </div>
         </div>
         <div class="col-12 col-md-5 col-lg-3">
@@ -128,16 +123,30 @@
         </div>
       </article>
     </section>
-
-
-
-
+  </main>
+   <!-- Modal -->
+   <div class="modal fade" id="ModalEstilo" tabindex="-1" aria-labelledby="ModalEstilo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-light" id="ModalEstilo">Estilo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+         <p class=" bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam vitae totam placeat assumenda id eveniet provident reprehenderit ipsum fugit.</p>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!--footer-->
     <footer class="container-fluid bg-dark">
       <section class="container">
         <article class="row">
           <div class="col-sm-12 col-md-4 col-lg-4 py-4 ">
-            <a href="index.html"><img src="" alt=""></a>
+            <a href="index.html"><img src="img/LogoPrueba.jpeg" alt=""></a>
           </div>
           <div class="col-sm-12 col-md-4 col-lg-4 py-4">
             <ul class="navbar-nav ms-0 mb-2 mb-lg-0">
@@ -171,6 +180,7 @@
       </section>
     </footer>
     <!-- JavaScript  -->
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 
