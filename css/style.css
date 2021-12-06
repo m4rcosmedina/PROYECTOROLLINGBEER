@@ -1,6 +1,10 @@
-* {
+ 
+
+.fondogeneral{
+
   background-color: #202224;
 }
+
 
 .logo {
   color: #bd994b;
@@ -65,4 +69,26 @@ button {
 
 .tipoDeTitulos {
   font-family: Arial, sans-serif, Helvetica;
+
+
+/* pagina sobre nosotros 
+
+
+
+
+.colorLetras{
+  color: #ddd2c4;
+  }
+  .colorLetras2{
+    color: #545658
+    }
+  .movimiento:hover {-webkit-transform:scale(1.02);transform:scale(1.02);
+    z-index: 1;
+    transition: 300ms;
+
 }
+.quitarSubrrayado{
+  text-decoration: none;
+}
+
+*/
