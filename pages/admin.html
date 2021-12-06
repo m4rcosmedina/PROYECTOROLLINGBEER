@@ -49,8 +49,8 @@
     </nav>
   </header>
   <main class="container-fluid ">
-    <section class="container  ">
-      <h1 class="display-3 text-center tipoDeTitulos ">Carga Tu Producto</h1>
+    <section class="container text-warning ">
+      <h1 class="display-3 text-center tipoDeTitulos  ">Ingresar nuevo producto</h1>
       <hr />
       <form id='formProducto' class="">
         <div class="mb-3">
@@ -73,7 +73,7 @@
           <label for="url" class="form-label">URL</label>
           <input type="text" class="form-control" id="url" placeholder="http://127.0.0.1:5500/img.jpg" />
         </div>
-        <button class="btn btn-success" type="submit" id="btnsumit">Guardar Producto</button>
+        <button class="btn btn-warning" type="submit" id="btnsumit">Guardar Producto</button>
 
       </form>
       <div class="alert alert-danger my-5 d-none" role="alert" id='msjAlerta'>
@@ -83,8 +83,8 @@
     <section class="container">
       <h2 class="display-3 text-center tipoDeTitulos ">Productos En Venta</h2>
       <hr>
-      <button class="btn btn-primary" id="nuevopro">Nueva Carga</button>
-      <button class="btn btn-secondary">Cargar datos de prueba</button>
+      <button class="btn btn-danger" id="nuevopro">Nueva Carga</button>
+      <button class="btn btn-warning">Cargar datos de prueba</button>
       <div class="table-responsive">
         <table class="table my-5  ">
           <thead>
