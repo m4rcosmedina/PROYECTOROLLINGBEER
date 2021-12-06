@@ -1,6 +1,10 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Orbitron:wght@700&family=Road+Rage&display=swap');
+ 
+
+{
   background-color: #202224;
 }
+
 
 .logo {
   color: #bd994b;
@@ -65,4 +69,34 @@
 
 button {
   background-color: #ddd2c4;
+}
+
+
+
+
+/* pagina sobre nosotros */
+.fondo{
+  background-image: url(/PROYECTOROLLINGBEER/img/fondoSobreNosotros/card_Mesa\ de\ trabajo\ 1.jpg);
+  background-size: 100%;
+}
+.fuente2{
+  
+  font-family: 'Gwendolyn', cursive;
+}
+.fuentePrincipal{
+  font-family: 'Road Rage', cursive;
+}
+.colorLetras{
+  color: #ddd2c4;
+  }
+  .colorLetras2{
+    color: #545658
+    }
+  .movimiento:hover {-webkit-transform:scale(1.02);transform:scale(1.02);
+    z-index: 1;
+    transition: 300ms;
+
+}
+.quitarSubrrayado{
+  text-decoration: none;
 }
