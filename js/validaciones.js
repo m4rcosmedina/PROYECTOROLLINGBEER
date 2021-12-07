@@ -1,62 +1,40 @@
 export function campoRequerido(input){
-    
+    // console.log('Desde la funcion campo requerido')
     if(input.value.trim().length > 0){
-        input.className = "is-valid form-control";
+        // console.log('aqui esta todo bien');
+        input.className = 'form-control is-valid';
         return true;
     }else{
-        
-        input.className = "is-invalid form-control";
+        // console.log('aqui muestro un error');
+        input.className = 'form-control is-invalid';
         return false;
     }
 }
-export function validarNumeros(input){
-        let patron = /^[0-9]{1,3}$/
-        if(patron.test(input.value)){
-            input.className = "form-control is-valid";
-            return true;
-        } else {
-            input.className = "form-control is-invalid";
-            return false;
-        }
-    }
-    export function validarUrl(input){    
-    let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/ ;
+
+
+export function validarURL(input){
+    let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
     if(patron.test(input.value)){
-        input.className = "form-control is-valid ";
+        input.className = 'form-control is-valid';
         return true;
-        
-    } else {        
-        input.className = " form-control is-invalid";
+    }else{
+        input.className = 'form-control is-invalid';
         return false;
     }
-    }
-    export function validarGeneral(campoCodigo,campoProducto,campoDescripcion,campoCantidad,campoUrl){
-        let alerta = document.querySelector("#mensajeAlerta");       
-        if(campoRequerido(campoCodigo) && campoRequerido(campoProducto) && 
-           campoRequerido(campoDescripcion)&& 
-           validarNumeros(campoCantidad) && 
-           validarUrl(campoUrl)){
-            alerta.className = "alert alert-danger my-2 d-none"
-            return true;
-        }else {
-            
-            alerta.className = "alert alert-danger my-2"
-            return false;   
+} 
 
-        }
-    }
-    let codigos = [];
-     export function generarCodigo(){
-        let codAleatorio=document.querySelector("#codigo");
-        codAleatorio=Math.floor(Math.random()* 999 + 1);
-        console.log(codAleatorio); 
-        console.log (codigos);
+export function validarGeneral(codigoForm, productoForm, descripcionForm, urlFrom){
+    let alerta = document.querySelector("#msjAlerta");
+    if(campoRequerido(codigoForm) &&
+       campoRequerido(productoForm)&&
+       campoRequerido(descripcionForm)&&
+       validarURL(urlFrom)){
+           console.log("los datos estan listos para ser enviados")
+           alerta.className = "alert alert-danger my5 d-none";
+            return true;}else{
+                console.log("los datos estan mal")
+                alerta.className = "alert alert-danger my-5"
+                return false;
+            }
 
-        if(codigos.includes(codAleatorio)){
-            console.log("repetido")
-        } else {
-            codigos.push(codAleatorio);
-            codigos.sort();
-        }
- 
-     }
+}
