@@ -6,6 +6,7 @@
 }
 
 
+
 .logo {
   color: #bd994b;
 
@@ -29,25 +30,17 @@
 /* pagina 404 */
 
 
-.contenedor {
-  height: 80vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-}
 
 .texto_principal__estilo {
-  width: 77ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  width: 20ch;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 2px solid;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #bd994b;
+  margin-left: 10%;
 }
 
 @keyframes typing {
@@ -62,8 +55,6 @@
   }
 }
 
-button {
-  background-color: #ddd2c4;
-}
+
 
 
