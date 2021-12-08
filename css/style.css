@@ -4,13 +4,8 @@
 
   background-color: #202224;
 }
-
-
-
 .logo {
   color: #bd994b;
-
-
 }
 
 .titulos {
@@ -26,10 +21,33 @@
   transform: scale(1.02, 1.02);
 }
 
+.facebook:hover {
+  background: #41579a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.twitter:hover {
+  background: #00acee;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.instagram:hover {
+  background: linear-gradient(
+    to top right,
+    #fcde30,
+    #e9712a,
+    #d2313b,
+    #ae4198,
+    #7540a1,
+    #5443a8
+  );
+  color: #fff;
+  border-radius: 5px;
+}
 
 /* pagina 404 */
-
-
 
 .texto_principal__estilo {
   width: 20ch;
@@ -48,13 +66,32 @@
     width: 0
   }
 }
-
 @keyframes blink {
   50% {
     border-color: transparent
   }
 }
-
-
+@media all and (max-width: 576px) {
+  .imgSlider{
+       height: 250px;       
+       object-fit: cover;
+      
+   }    
+   .imgMano{
+  content: url("../img/mano2.jpg");
+    
+   }
+   .e404{
+  font-size: 1.5em;
+  width: 15ch;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-family: monospace;
+  color: #bd994b;
+  display: grid;  
+   }
+}
 
 
