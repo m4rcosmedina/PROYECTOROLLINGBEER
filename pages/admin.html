@@ -45,7 +45,7 @@
   </header>
   <main class="container-fluid ">
     <section class="container text-warning ">
-      <h1 class="display-3 text-center tipoDeTitulos  ">Ingresar nuevo producto</h1>
+      <h1 class="display-3 text-center ">Ingresar nuevo producto</h1>
       <hr />
       <form id='formProducto' class="">
         <div class="mb-3">
@@ -75,16 +75,20 @@
         Debe completar todos los campos
       </div>
     </section>
-    <section class="container">
-      <h2 class="display-3 text-center tipoDeTitulos ">Productos En Venta</h2>
+    <div class="text-center">
       <hr>
       <button class="btn btn-danger" id="nuevopro">Nueva Carga</button>
       <button class="btn btn-warning">Cargar datos de prueba</button>
+    </div>
+    <section class="container">
+     
+   
+      <h2 class="display-3 text-center text-warning ">Productos En Venta</h2>
       <div class="table-responsive">
         <table class="table my-5  ">
-          <thead>
+          <thead class="text-warning">
             <tr>
-              <th scope="col">Cod.</th>
+              <th scope="col ">Cod.</th>
               <th scope="col">Producto</th>
               <th scope="col">Descripcion</th>
               <th scope="col">Cantidad</th>
@@ -92,11 +96,11 @@
               <th scope="col">Acciones</th>
             </tr>
           </thead>
-          <tbody id="tablaproductos">
-
+          <tbody id="tablaproductos" class="text-white">
+  
           </tbody>
         </table>
-
+  
       </div>
     </section>
 

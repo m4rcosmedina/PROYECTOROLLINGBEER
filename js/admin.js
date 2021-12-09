@@ -7,6 +7,7 @@ let descripcionForm = document.querySelector("#descripcion");
 let urlFrom = document.querySelector("#url") 
 let formularioProducto = document.querySelector("#formProducto")
 let listaLocalStorage = JSON.parse(localStorage.getItem("arregloProductosLS")) || [];
+let productoExistente = false; //producto para crear,si es TRUE queiro modificar.
 
 
 
@@ -14,7 +15,7 @@ let listaLocalStorage = JSON.parse(localStorage.getItem("arregloProductosLS")) |
 let numero;
 
   let codigoRandom= () => {
-    numero = Math.floor(10*Math.random())+1
+    numero = Math.floor(100*Math.random())+1
     return numero;  
   }
 
@@ -37,9 +38,12 @@ let numero;
     // verificar que todos los datos sean validados
     e.preventDefault();
     if(validarGeneral(codigoForm, productoForm, descripcionForm, urlFrom)){
+      if(productoExistente == false){
         //crear un producto
       crearProducto();
-     CrearFila();
+      }else{
+        modificarProducto()
+      } 
     }
 }
 
@@ -48,6 +52,7 @@ let numero;
    listaLocalStorage.push(productoNuevo);
    guardarLocals();
    resetearFormulario();
+   CrearFila(productoNuevo);
    
  }
 
@@ -67,14 +72,14 @@ function resetearFormulario(){
 
 
 function CrearFila(producto){
-  let tablaProductos = document.querySelector("#tablaproductos")
-  tablaProductos.innerHTML += `<tr>
+  let tablaProductoss = document.querySelector("#tablaproductos")
+  tablaProductoss.innerHTML += `<tr>
   <td>${producto.codigo}</td>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
   <td>${producto.url}</td>
   <td>
-    <button class="btn btn-warning"onclick="prepararEdicionUno(${producto.codigo})">Editar</button>
+    <button class="btn btn-warning" onclick="edicionProducto(${producto.codigo})">Editar</button>
     <button class="btn btn-danger">Borrar</button>
   </td>
 </tr>`
@@ -84,9 +89,44 @@ function cargaInicial(){
   if(listaLocalStorage.length > 0){
       //crear filas
       //blucle  forEach()
-      listaLocalStorage.forEach((storageproductos) => {CrearFila(storageproductos)});
+      listaLocalStorage.forEach((storageproductos)=>{CrearFila(storageproductos)});
   }
 }
+
+window.edicionProducto = function (codigo){  
+  //esto busca producto en arreglo y muesrta en formulario
+  let codigoBuscado = listaLocalStorage.find((itemslocalstorage) =>{return itemslocalstorage.codigo == codigo});
+  codigoForm.value = codigoBuscado.codigo ;
+  productoForm.value = codigoBuscado.producto;
+  descripcionForm.value = codigoBuscado.descripcion ;
+  urlFrom.value = codigoBuscado.url ;
+  productoExistente=true;
+}
+
+function modificarProducto(){
+  console.log("desea modificar producto");
+  // encontrar la posicion del elemnto que quiero modificar dentro del arreglo de productos
+     let posicionObjeto = listaLocalStorage.findIndex((itemproducto)=>{return itemproducto.codigo == codigoForm.value})
+    console.log(posicionObjeto)
+
+    listaLocalStorage[posicionObjeto].producto = productoForm.value;
+    listaLocalStorage[posicionObjeto].descripcion = descripcionForm.value;
+    listaLocalStorage[posicionObjeto].url = urlFrom.value;
+    guardarLocals();
+    let resetTabla = document.querySelector("#tablaproductos");
+    resetTabla.innerHTML="";
+
+      
+
+    
+}
+
+
+   
+      
+
+
+
 
   productoForm.addEventListener("blur", () => campoRequerido(productoForm));
   descripcionForm.addEventListener("blur", () => campoRequerido(descripcionForm));
