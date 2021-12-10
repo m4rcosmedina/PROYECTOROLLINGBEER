@@ -107,7 +107,7 @@
 
  .filtro {
    display: flex;
-   width: 400px;
+   width: 390px;
    justify-content:center;
    align-items: center;
    margin: auto;
@@ -130,6 +130,7 @@
    justify-content: center;
    margin-top: 1%;
    font-family:'raleway' ;
+   text-align:center;
  }
  .botonAcceder{
   display: flex;
