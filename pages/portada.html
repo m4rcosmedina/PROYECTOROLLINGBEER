@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyecto RollingBeer" />
+  <meta name="author" content="Marta Arriola, Giuliano Carbone, Marcos Medina, Alfredo Ruiz y Mariano Meik" />
+  <meta name="keywords" content="estilos de cerveza artesanal, descripciones" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Roboto+Mono&display=swap');
+    </style>
+
+  <script src="https://kit.fontawesome.com/e304c7dec7.js" crossorigin="anonymous"></script>
+  <title>Proyecto 2 - RollingBeer</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a href="/pages/portada.html" style="text-decoration:none">
+          <p class="logo"> <img src="/img/logo/logo2_Mesa de trabajo 1.png" alt="logo RollingBeer"height="90"> </p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarPlantilla"
+          aria-controls="navBarPlantilla" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse titulos" id="navBarPlantilla">
+          <ul class="navbar-nav nav-pills ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active-dark" style="color:gold" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/admin.html">Administración</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/nosotros.html">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="fondogeneral">
+    <!--Inicio Slider-->
+    <section class="border-5 border-dark">
+      <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/FondoRgb.jpg" class="d-block w-100 imgSlider imgMano " alt="imagen slider con mano y destapador">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/IMGRGB.jpg" class="d-block w-100 imgSlider" alt="imagen slider botellas cerveza">
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+    <section class="my-1 ">
+      <!--<h1 class="display-2 text-center pt-5"> Conocé nuestros estilos</h1> -->
+    </section>
+    <section class="galeria shadow py-5 container-fluid justify-content-center" >
+      <article class="row">
+        <div class=" col-12 col-md-5 col-lg-3">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/ALFREDRGB.jpg" class="card-img-top"  alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo1"> 
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/GIULIANORGB.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo2">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/MARCOSRGB.jpg" class=" card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo3">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3  ">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/MARIANRGB.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo4">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3 ">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/MARTARGB.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo5">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3 ">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/NATALIA.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo6">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3 ">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/ROCIO.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo7">
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3 ">
+          <div class="card" style="width: 102%;">
+            <img src="/img/CARDS/BAZAN.jpeg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal"
+            data-bs-target="#ModalEstilo8">
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+   <!-- Modal1 -->
+   <div class="modal fade" id="ModalEstilo1" tabindex="-1" aria-labelledby="ModalEstilo1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="img/DESCRIPCIONES CARDS/IPA.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal2 -->
+  <div class="modal fade" id="ModalEstilo2" tabindex="-1" aria-labelledby="ModalEstilo2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/TRIPEL.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal3 -->
+   <div class="modal fade" id="ModalEstilo3" tabindex="-1" aria-labelledby="ModalEstilo3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/GOLD.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal4 -->
+   <div class="modal fade" id="ModalEstilo4" tabindex="-1" aria-labelledby="ModalEstilo4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/RED.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal5 -->
+   <div class="modal fade" id="ModalEstilo5" tabindex="-1" aria-labelledby="ModalEstilo5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/IRISH.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal6 -->
+   <div class="modal fade" id="ModalEstilo6" tabindex="-1" aria-labelledby="ModalEstilo6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/HONEY.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal7 -->
+   <div class="modal fade" id="ModalEstilo7" tabindex="-1" aria-labelledby="ModalEstilo7" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/STOUT.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal8 -->
+   <div class="modal fade" id="ModalEstilo8" tabindex="-1" aria-labelledby="ModalEstilo8" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-white">
+          <img src="/img/DESCRIPCIONES CARDS/BOCK.jpg" class="card-img-top" alt="imagen estilo de cerveza" data-bs-toggle="modal">
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-warning " data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+ 
+  </main>
+  <!--footer-->
+  <footer class="container-fluid ">
+    <section class="container ">
+      <article class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 py-4 ">
+          <a class="" href="/pages/portada.html"><img src="/img/logo/logo2_Mesa de trabajo 1.png" width="250px"></a>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 py-4">
+          <ul class="navbar-nav ms-0 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link  text-light aria-current=" href="/pages/portada.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-light" href="/pages/admin.html">Administración</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="/pages/nosotros.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-light" href="/pages/contacto.html">Contacto</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 py-4  text-light">
+          <h5>Seguinos en nuestras redes</h5>
+          <div class=" d-flex ">
+            <a href="/pages/error404.html" class=" text-white facebook" target="blank"><i
+                class="fab fa-facebook-square fa-2x px-1 align-content-center"></i></a>
+            <a href="/pages/error404.html" class=" text-white twitter" target="blank"><i
+                class="fab fa-twitter-square fa-2x px-1"></i></a>
+            <a href="/pages/error404.html" class=" text-white instagram" target="blank"><i
+                class="fab fa-instagram fa-2x px-1"></i></a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </footer>
+  <!-- JavaScript  -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="./js/admin.js" type="module"></script>
+
+</body>
+
+</html>
