@@ -3,10 +3,10 @@
 *{
 
   background-color: #202224;
+  font-family:  Helvetica, sans-serif;
 }
-.logo {
-  color: #bd994b;
-}
+
+
 
 .titulos {
   color: #ddd2c4;
@@ -95,3 +95,11 @@
 }
 
 
+
+
+.logo:hover{
+  transform: rotate(180deg);
+}
+.nav-link:hover {
+font-size: large;
+}
