@@ -24,21 +24,21 @@ export class Producto{
             return this.url;
           }
         
-          set modificarCodigo(nuevoCodigo) {
-              this.codigo = nuevoCodigo;
-          }
-          set modificarProducto(nuevoProducto) {
-              this.producto = nuevoProducto;
-          }
-          set modificarDescripcion(nuevaDescripcion) {
-              this.descripcion = nuevaDescripcion;
-          }
-          set modificarCantidad(nuevaCantidad) {
-              this.cantidad = nuevaCantidad;
-          }
-          set modificarUrl(nuevaUrl) {
-              this.url = nuevaUrl;
-          }
+          set modificarCodigo(){
+                return this.codigo
+              }
+              set modificarProducto(){
+                return this.producto
+              }
+              set modificarDescripcion(){
+                 return this.descripcion
+              }
+              set modificarCantidad(){
+                return this.cantidad
+              }
+              set modificarUrl(){
+                return this.url
+              }
 
         
 }
