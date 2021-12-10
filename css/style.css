@@ -98,7 +98,7 @@
 
 
 .logo:hover{
-  transform: rotate(180deg);
+  transform:scale(0.8)
 }
 .nav-link:hover {
 font-size: large;
