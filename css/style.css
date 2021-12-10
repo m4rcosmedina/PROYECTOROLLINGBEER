@@ -128,10 +128,10 @@
    color: #fff;
    display: flex;
    justify-content: center;
-   margin-top: 2%;
+   margin-top: 3%;
    font-family:'raleway' ;
    text-align:center;
-   margin: auto;
+   padding: auto;
  }
  .botonAcceder{
   display: flex;
