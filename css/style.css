@@ -137,11 +137,12 @@
   color: #bd994b;
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 
 .logo404{
   display: flex;
-  width: 390px;
+  width: 300px;
   justify-content: center;
   align-items: center;
   margin: auto;
