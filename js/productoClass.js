@@ -18,5 +18,19 @@ export class Producto{
         get mostrarURl(){
             return this.url
         }
+        set modificarCodigo(nuevoCodigo) {
+                  this.codigo = nuevoCodigo;
+              }
+              set modificarProducto(nuevoProducto) {
+                  this.producto = nuevoProducto;
+              }
+              set modificarDescripcion(nuevaDescripcion) {
+                  this.descripcion = nuevaDescripcion;
+              }
+              
+              set modificarUrl(nuevaUrl) {
+                  this.url = nuevaUrl;
+              }
+    
 }
 

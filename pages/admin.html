@@ -8,23 +8,23 @@
   <meta name="description" content="Proyecto RollingBeer" />
   <meta name="author" content="Marta Arriola, Giuliano Carbone, Marcos Medina, Alfredo Ruiz y Mariano Meik" />
   <meta name="keywords" content="estilos de cerveza artesanal, descripciones" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="https://kit.fontawesome.com/e304c7dec7.js" crossorigin="anonymous"></script>
-  <title>Proyecto 2 - RollingBeer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Roboto+Mono&display=swap');
+  </style>
+
+  <title>RollingBeer</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a href="/index.html" style="text-decoration:none">
-          <h1 class="logo"> <img src="/img/logo/logo2_Mesa de trabajo 1.png" height="90"> </h1>
+        <a href="/pages/portada.html" style="text-decoration:none">
+          <p class="logo"> <img src="/img/logo/logo2_Mesa de trabajo 1.png" alt="logo RollingBeer" height="90"> </p>
         </a>
-        <a class="navbar-brand" href="index.html">
-          <img src="" alt="" />
-        </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarPlantilla"
           aria-controls="navBarPlantilla" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse titulos" id="navBarPlantilla">
           <ul class="navbar-nav nav-pills ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link"  href="/index.html">Inicio</a>
+              <a class="nav-link" href="/pages/portada.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active-dark" style="color:gold" href="/pages/admin.html">Administración</a>
@@ -50,12 +50,12 @@
   </header>
   <main class="container-fluid ">
     <section class="container text-warning ">
-      <h1 class="display-3 text-center tipoDeTitulos  ">Ingresar nuevo producto</h1>
+      <h1 class="display-3 text-center ">Ingresar nuevo producto</h1>
       <hr />
       <form id='formProducto' class="">
         <div class="mb-3">
-          <label for="codigo" class="form-label">Codigo</label>
-          <input type="number" class="form-control" id="codigo" disabled />
+          <label for="codigo" class="form-label" style="display: none;">Codigo</label>
+          <input type="number" class="form-control" id="codigo" disabled style="display: none;" />
           <div class="invalid-feedback">
             Debe ingresar un codigo alfanumerico
           </div>
@@ -73,23 +73,27 @@
           <label for="url" class="form-label">URL</label>
           <input type="text" class="form-control" id="url" placeholder="http://127.0.0.1:5500/img.jpg" />
         </div>
-        <button class="btn btn-warning" type="submit" id="btnsumit">Guardar Producto</button>
+        <button class="btn btn-warning" type="submit" id="btnsubmit">Guardar Producto</button>
 
       </form>
       <div class="alert alert-danger my-5 d-none" role="alert" id='msjAlerta'>
         Debe completar todos los campos
       </div>
     </section>
-    <section class="container">
-      <h2 class="display-3 text-center tipoDeTitulos ">Productos En Venta</h2>
+    <div class="text-center">
       <hr>
       <button class="btn btn-danger" id="nuevopro">Nueva Carga</button>
       <button class="btn btn-warning">Cargar datos de prueba</button>
+    </div>
+    <section class="container">
+
+
+      <h2 class="display-3 text-center text-warning ">Productos En Venta</h2>
       <div class="table-responsive">
         <table class="table my-5  ">
-          <thead>
+          <thead class="text-warning">
             <tr>
-              <th scope="col">Cod.</th>
+              <th scope="col ">Cod.</th>
               <th scope="col">Producto</th>
               <th scope="col">Descripcion</th>
               <th scope="col">Cantidad</th>
@@ -97,7 +101,7 @@
               <th scope="col">Acciones</th>
             </tr>
           </thead>
-          <tbody id="tablaproductos">
+          <tbody id="tablaproductos" class="text-white">
 
           </tbody>
         </table>
@@ -111,14 +115,12 @@
     <section class="container">
       <article class="row">
         <div class="col-sm-12 col-md-4 col-lg-4 py-4 ">
-          <a class="" href="index.html"><img src="/img/logo/logo2_Mesa de trabajo 1.png" width="250px"></a>
-
-          <a href="index.html"><img src="" alt=""></a>
+          <a class="" href="/pages/portada.html"><img src="/img/logo/logo2_Mesa de trabajo 1.png" width="250px"></a>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 py-4">
           <ul class="navbar-nav ms-0 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link  text-light aria-current=" href="../index.html">Inicio</a>
+              <a class="nav-link  text-light aria-current=" href="/pages/portada.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  text-light" href="/pages/admin.html">Administración</a>
@@ -135,11 +137,11 @@
         <div class="col-sm-12 col-md-4 col-lg-4 py-4  text-light">
           <h5>Seguinos en nuestras redes</h5>
           <div class=" d-flex ">
-            <a href="error404.html" class="text-white facebook" target="blank"><i
+            <a href="/pages/error404.html" class="text-white facebook" target="blank"><i
                 class="fab fa-facebook-square fa-2x px-1 align-content-center"></i></a>
-            <a href="error404.html" class="text-white twitter" target="blank"><i
+            <a href="/pages/error404.html" class="text-white twitter" target="blank"><i
                 class="fab fa-twitter-square fa-2x px-1"></i></a>
-            <a href="error404.html" class="text-white instagram" target="blank"><i
+            <a href="/pages/error404.html" class="text-white instagram" target="blank"><i
                 class="fab fa-instagram fa-2x px-1"></i></a>
           </div>
         </div>
