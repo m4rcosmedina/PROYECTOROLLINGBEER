@@ -145,3 +145,20 @@
 .enlacePortada{
   text-decoration: none;
 }
+
+.tituloPrincipal,
+.titulosTabla{
+color: #bd994b;
+}
+
+.tablaInferior{
+  margin-top: 5%;
+}
+
+.cuadrosPrincipales{
+  margin-top: 3%;
+}
+
+.portada{
+  margin-top:3%
+}
