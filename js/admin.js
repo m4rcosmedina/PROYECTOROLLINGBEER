@@ -7,7 +7,7 @@ let descripcionForm = document.querySelector("#descripcion");
 let urlFrom = document.querySelector("#url") 
 let formularioProducto = document.querySelector("#formProducto")
 let listaLocalStorage = JSON.parse(localStorage.getItem("arregloProductosLS")) || [];
-let productoExistente = false; //producto para crear,si es TRUE queiro modificar.
+let productoExistente = false; 
 
 
 
@@ -15,7 +15,7 @@ let productoExistente = false; //producto para crear,si es TRUE queiro modificar
 let numero;
 
   let codigoRandom= () => {
-    numero = Math.floor(100*Math.random())+1
+    numero = Math.floor(20*Math.random())+1
     return numero;  
   }
 
@@ -42,7 +42,7 @@ let numero;
         //crear un producto
       crearProducto();
       }else{
-        modificarProducto()
+        modificarProducto();
       } 
     }
 }
@@ -53,6 +53,10 @@ let numero;
    guardarLocals();
    resetearFormulario();
    CrearFila(productoNuevo);
+   Swal.fire(
+    'Producto cargado con exito',
+ 
+  );
    
  }
 
@@ -72,7 +76,7 @@ function resetearFormulario(){
 
 
 function CrearFila(producto){
-  let tablaProductoss = document.querySelector("#tablaproductos")
+  let tablaProductoss = document.getElementById("tablaproductos")
   tablaProductoss.innerHTML += `<tr>
   <td>${producto.codigo}</td>
   <td>${producto.producto}</td>
@@ -80,8 +84,8 @@ function CrearFila(producto){
   <td>${producto.url}</td>
   <td>
     <button class="btn btn-warning" onclick="edicionProducto(${producto.codigo})">Editar</button>
-    <button class="btn btn-danger">Borrar</button>
-  </td>
+    <button class="btn btn-danger" onclick="borrarProducto(${producto.codigo})">Borrar</button>
+    </td>
 </tr>`
 } 
 
@@ -113,18 +117,19 @@ function modificarProducto(){
     listaLocalStorage[posicionObjeto].descripcion = descripcionForm.value;
     listaLocalStorage[posicionObjeto].url = urlFrom.value;
     guardarLocals();
-    let resetTabla = document.querySelector("#tablaproductos");
-    resetTabla.innerHTML="";
-
-      
+    borrarTabla();
+    cargaInicial();
+   // let resetTabla = document.querySelector("#tablaproductos");
+   // resetTabla.innerHTML="";
+   resetearFormulario();
+   Swal.fire(
+    'Producto modificado con exito',
+ 
+  );
+  
 
     
 }
-
-
-   
-      
-
 
 
 
@@ -134,3 +139,24 @@ function modificarProducto(){
   codigoForm.value = checkNumero();
   formularioProducto.addEventListener("submit", guardarProducto);
   cargaInicial();
+
+  function borrarTabla(){
+    let tbodyProductos = document.getElementById("tablaProductos");
+    tbodyProductos.innerHTML=''; 
+  }
+
+  window.borrarProducto = function(codigo){
+    console.log(codigo);
+    let arregloNuevo = listaLocalStorage.filter((item)=>{return item.codigo != codigo});
+   listaLocalStorage = arregloNuevo;
+   guardarLocals();
+   borrarTabla();
+   cargaInicial();
+   Swal.fire(
+    'Producto eliminado',
+    'Al final no eras tan capo',
+    'success'
+  )
+
+}
+

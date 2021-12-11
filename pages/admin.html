@@ -8,12 +8,14 @@
   <meta name="description" content="Proyecto RollingBeer" />
   <meta name="author" content="Marta Arriola, Giuliano Carbone, Marcos Medina, Alfredo Ruiz y Mariano Meik" />
   <meta name="keywords" content="estilos de cerveza artesanal, descripciones" />
+  <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <script src="https://kit.fontawesome.com/e304c7dec7.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Roboto+Mono&display=swap');
   </style>
+
 
   <title>RollingBeer</title>
 </head>
@@ -82,7 +84,7 @@
     </section>
     <div class="text-center">
       <hr>
-      <button class="btn btn-danger" id="nuevopro">Nueva Carga</button>
+      <button class="btn btn-danger" id="btnNuevo">Nueva Carga</button>
       <button class="btn btn-warning">Cargar datos de prueba</button>
     </div>
     <section class="container tablaInferior"> 
@@ -90,9 +92,9 @@
       
       <div class="table-responsive">
         <table class="table my-5  ">
-          <thead class=" titulosTabla">
+          <thead class="titulosTabla">
             <tr>
-              <th scope="col ">Cod.</th>
+              <th scope="col">Cod.</th>
               <th scope="col">Producto</th>
               <th scope="col">Descripcion</th>
               <th scope="col">Cantidad</th>
@@ -101,10 +103,8 @@
             </tr>
           </thead>
           <tbody id="tablaproductos" class="text-white">
-
           </tbody>
         </table>
-
       </div>
     </section>
 
@@ -150,6 +150,7 @@
   <!-- JavaScript  -->
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/admin.js" type="module"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
