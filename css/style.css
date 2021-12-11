@@ -1,69 +1,147 @@
- 
+ * {
 
-*{
-
-  background-color: #202224;
-}
-
-
-.logo {
-  color: #bd994b;
+   background-color: #202224;
+   font-family: 'Raleway', sans-serif;
+ }
 
 
-}
 
-.titulos {
-  color: #ddd2c4;
-  font-size: large;
-}
+ .titulos {
+   color: #ddd2c4;
+   font-size: large;
+ }
 
-.card {
-  border: 0px
-}
+ .card {
+   border: 0px
+ }
 
-.card:hover {
-  transform: scale(1.02, 1.02);
-}
+ .card:hover {
+   transform: scale(1.02, 1.02);
+ }
+
+ .facebook:hover {
+   background: #41579a;
+   color: #fff;
+   border-radius: 5px;
+ }
+
+ .twitter:hover {
+   background: #00acee;
+   color: #fff;
+   border-radius: 5px;
+ }
+
+ .instagram:hover {
+   background: linear-gradient(to top right,
+       #fcde30,
+       #e9712a,
+       #d2313b,
+       #ae4198,
+       #7540a1,
+       #5443a8);
+   color: #fff;
+   border-radius: 5px;
+ }
+
+ /* pagina 404 */
+
+ .texto_principal__estilo {
+   width: 20ch;
+   animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 2px solid;
+   font-family: monospace;
+   font-size: 2.5em;
+   color: #bd994b;
+   margin-left: 10%;
+ }
+
+ @keyframes typing {
+   from {
+     width: 0
+   }
+ }
+
+ @keyframes blink {
+   50% {
+     border-color: transparent
+   }
+ }
+
+ @media all and (max-width: 576px) {
+   .imgSlider {
+     height: 250px;
+     object-fit: cover;
+
+   }
+
+   .imgMano {
+     content: url("../img/mano2.jpg");
+
+   }
+
+   .e404 {
+     font-size: 1.5em;
+     width: 15ch;
+     animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+     white-space: nowrap;
+     overflow: hidden;
+     border-right: 2px solid;
+     font-family: monospace;
+     color: #bd994b;
+     display: grid;
+   }
+ }
 
 
-/* pagina 404 */
 
 
-.contenedor {
-  height: 80vh;
+ .logo:hover {
+   transform: scale(0.8)
+ }
 
+ .nav-link:hover {
+   font-size: large;
+ }
+
+ .filtro {
+   display: flex;
+   width: 390px;
+   justify-content:center;
+   align-items: center;
+   margin: auto;
+   margin-top: 6%;
+ }
+ .filtro:hover{
+   filter:blur(2px);
+ }
+
+ .bienvenida{
+   color: #bd994b;
+   display: flex;
+   justify-content: center;
+   margin-top: 5%;
+ }
+
+ .textoBienvenida{
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   margin-top: 3%;
+   font-family:'raleway' ;
+   text-align:center;
+   padding: auto;
+ }
+ .botonAcceder{
   display: flex;
+  justify-content:center;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
+  margin: auto;
+  margin-top: 2%;
+  background-color:#bd994b ;
 }
 
-.texto_principal__estilo {
-  width: 77ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 1.5em;
-  color: #bd994b;
+.enlacePortada{
+  text-decoration: none;
 }
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-
-button {
-  background-color: #ddd2c4;
-}
-
-
