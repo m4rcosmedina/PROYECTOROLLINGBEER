@@ -96,8 +96,8 @@ function cargaInicial() {
   if (listaLocalStorage.length > 0) {
     //crear filas
     //blucle  forEach()
-    listaLocalStorage.forEach((storageproductos) => {
-      crearFila(storageproductos)
+    listaLocalStorage.forEach((storageProductos) => {
+      crearFila(storageProductos)
     });
   }
 }
@@ -127,7 +127,9 @@ function modificarProducto() {
   listaLocalStorage[posicionObjeto].url = urlFrom.value;
   guardarLocals();
   borrarTabla();
+  
   cargaInicial();
+  
   // let resetTabla = document.querySelector("#tablaproductos");
   // resetTabla.innerHTML="";
   resetearFormulario();
