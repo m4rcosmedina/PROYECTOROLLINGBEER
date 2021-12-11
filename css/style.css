@@ -162,3 +162,9 @@ color: #bd994b;
 .portada{
   margin-top:3%
 }
+.btnPersona{
+  background-color: #bd994b;
+}
+.btnPersona:hover{
+  transform: scale(1.03);
+}
