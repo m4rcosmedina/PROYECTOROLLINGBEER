@@ -54,8 +54,8 @@
       <hr />
       <form id='formProducto' class="">
         <div class="mb-3">
-          <label for="codigo" class="form-label">Codigo</label>
-          <input type="number" class="form-control" id="codigo" disabled />
+          <label for="codigo" class="form-label" style="display: none;">Codigo</label>
+          <input type="number" class="form-control" id="codigo" disabled style="display: none;" />
           <div class="invalid-feedback">
             Debe ingresar un codigo alfanumerico
           </div>
@@ -73,7 +73,7 @@
           <label for="url" class="form-label">URL</label>
           <input type="text" class="form-control" id="url" placeholder="http://127.0.0.1:5500/img.jpg" />
         </div>
-        <button class="btn btn-warning" type="submit" id="btnsumit">Guardar Producto</button>
+        <button class="btn btn-warning" type="submit" id="btnsubmit">Guardar Producto</button>
 
       </form>
       <div class="alert alert-danger my-5 d-none" role="alert" id='msjAlerta'>

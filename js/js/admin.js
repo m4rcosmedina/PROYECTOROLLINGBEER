@@ -9,7 +9,7 @@ let campoCantidad = document.querySelector('#IngresoCantidad');
 let campoUrl = document.querySelector('#url');
 let formularioProducto = document.querySelector("#formProducto");
 // si hay algo en el local storage quiero guardarlo en el arreglo , sino en un arreglo vacio
-let listaProducto = JSON.parse(localStorage.getItem ("arregloProductosKey"))|| []; 
+let listaProducto = JSON.parse(localStorage.getItem("arregloProductosKey"))|| []; 
 let productoExistente = false; // quiere decir que no hay un producto, entonces queremos crear producto nuevo
 
 //asociar un evento a un elemento del html
@@ -78,19 +78,20 @@ function limpiarFormulario(){
       campoDescripcion.className="form-control";
       campoCantidad.className="form-control";
       campoUrl.className="form-control";
+      productoExistente = false;
 }
 
 function crearFila(producto){
     let tablaProductos = document.querySelector("#tablaProductos");
     tablaProductos.innerHTML += `<tr>
     <td scope="row">${producto.codigo}</td>
-    <td > ${producto.producto}</td>
+    <td> ${producto.producto}</td>
     <td>${producto.descripcion}</td>
     <td>${producto.cantidad}</td>
     <td>${producto.url}</td>
-    <td><button type="submit" class="btn btn-warning" onclick="prepararEdicionProducto(${producto.codigo})">Editar</button>
-        <button type="submit" class="btn btn-danger">Borrar</button></td>
-  </tr>` 
+    <td><button type="submit" class="btn btn-warning" onclick='prepararEdicionProducto("${producto.codigo}")>Editar</button>
+        <button type="submit" class="btn btn-danger"onclick='borrarProducto("${producto.splice}")'>Borrar</button></td>
+  </tr>`;
 }
 
 function cargaInicial(){
@@ -99,7 +100,7 @@ function cargaInicial(){
         listaProducto.forEach((itemProducto)=>{crearFila(itemProducto)});
     } 
 }
-window.prepararEdicionProducto= function(){
+window.prepararEdicionProducto= function(codigo){
     console.log("desea editar");
     // buscar el producto en el arreglo 
     let productoBuscado = listaProducto.find((itemProducto)=>{return itemProducto.codigo == codigo});
@@ -113,13 +114,13 @@ window.prepararEdicionProducto= function(){
      campoUrl.value = productoBuscado.url;
 
      //cambio mi variable productoExistente
-     productoExistente = true;
+     productoExistente = true
 }
 
 function modificarProducto(){
     console.log("desea modificar producto");
     // encontrar la posicion del elemnto que quiero modificar dentro del arreglo de productos
-       let posicionObjetoBuscado = listaProducto.findIndex(()=>{return itemProducto.codigo == campoCodigo.value});
+       let posicionObjetoBuscado = listaProducto.findIndex((itemProducto)=>{return itemProducto.codigo === campoCodigo.value});
        console.log(posicionObjetoBuscado);
     //modificar los valores dentro del arreglo
        listaProducto[posicionObjetoBuscado].producto = campoProducto.value;
@@ -131,10 +132,26 @@ function modificarProducto(){
     //actualizar la tabla
      borrarTabla();
      cargaInicial();
+
+     limpiarFormulario();
     
 }
 
 function borrarTabla(){
-    let tBodyProductos = document.querySelector("#tablaProductos");
-    tBodyProductos.innerHTML = "";
+    let tBodyProductos = document.getElementById('tablaProductos');
+    tBodyProductos.innerHTML = '';
+}
+window.borrarProducto = function(codigo){
+    console.log(codigo);
+    //buscar posicion del elemento en el arreglo y borrarlo.
+    let arregloNuevo = listaProductos.filter((item)=>{return item.codigo != codigo});
+   // console.log(arregloNuevo);
+   listaProductos = arregloNuevo;
+   guardarLocalStorage();
+   //actualizar la tabla
+   borrarTabla();
+   cargaInicial();
+   //mostrar cartel al usuario
+ 
+
 }
