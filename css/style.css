@@ -166,12 +166,13 @@
 	border: none;
 }
 
-
+/*pantallas chicas*/
 @media all and (max-width: 576px) {
   .cajaBusqueda{
    
     justify-content: start;
   }
+
 }
 
 

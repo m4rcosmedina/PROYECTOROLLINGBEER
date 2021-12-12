@@ -50,7 +50,6 @@ function crearProducto() {
   Swal.fire(
     'Producto cargado con exito',
   );
-
 }
 function guardarLocals() {
   localStorage.setItem("arregloProductosLS", JSON.stringify(listaLocalStorage))
@@ -118,7 +117,6 @@ function modificarProducto() {
   
   Swal.fire(
     'Producto modificado con exito',
-
   );
   resetearFormulario();
 }
@@ -149,4 +147,3 @@ window.borrarProducto = function (codigo) {
   )
 }
 
-//buscador
