@@ -43,8 +43,9 @@
    border-radius: 5px;
  }
 
+
  .logo:hover {
-   transform: scale(0.8)
+   transform: scale(0.95)
  }
 
  .nav-link:hover {
