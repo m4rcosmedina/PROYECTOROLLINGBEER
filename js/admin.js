@@ -84,7 +84,7 @@ function crearFila(producto) {
   <td>${producto.codigo}</td>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
-  <td>${producto.url}</td>
+  
   <td>
     <button class="btn btn-warning" onclick='edicionProducto("${producto.codigo}")'>Editar</button>
     <button class="btn btn-danger" onclick='borrarProducto("${producto.codigo}")'>Borrar</button>
