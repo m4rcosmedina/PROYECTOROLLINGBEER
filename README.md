@@ -14,6 +14,7 @@
 ## Librerias usadas
 - [Bostrap v5.1](https://getbootstrap.com/)
 - [Fontawesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
 
 ## Autores
 - Arriola Marta
