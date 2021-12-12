@@ -1,7 +1,7 @@
  * {
 
-   background-color:#202224;
-     font-family: 'Raleway', sans-serif;
+   background-color: #202224;
+   font-family: 'Raleway', sans-serif;
  }
 
 
@@ -120,36 +120,41 @@
    transform: scale(1.03);
  }
 
-.texto404{
-  
-  color: #bd994b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5cm;
+ .texto404 {
 
-}
+   color: #bd994b;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 5cm;
 
-.texto404:hover{
-  filter: blur(2px);
+ }
 
-}
-.mensaje404{
-  color: #bd994b;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
+ .texto404:hover {
+   filter: blur(2px);
 
-.logo404{
-  display: flex;
-  width: 300px;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 6%;
-}
+ }
 
-.textoCards {
-  color: #bd994b;
-}
+ .mensaje404 {
+   color: #bd994b;
+   display: flex;
+   justify-content: center;
+   margin: auto;
+ }
+
+ .logo404 {
+   display: flex;
+   width: 300px;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   margin-top: 6%;
+ }
+
+ .textoCards {
+   color: #bd994b;
+ }
+
+ .tituloCard{
+   font-weight:bold;
+ }

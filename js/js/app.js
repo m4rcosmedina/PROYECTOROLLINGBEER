@@ -8,7 +8,7 @@ function crearColumnas(producto){
     grilla.innerHTML += `<div class="col-sm-3" >
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title text-center">${producto.producto}</h5>
+            <h5 class="card-title text-center tituloCard">${producto.producto}</h5>
             <img src="${producto.url}"
                 class="card-img-top w-200" alt="Imagen aun no disp.">
             <p class="card-text text-light text-center">${producto.descripcion}</p>

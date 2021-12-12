@@ -75,6 +75,7 @@ function resetearFormulario() {
   descripcionForm.className = "form-control"
   urlFrom.className = "form-control"
   codigoForm.value = checkNumero();
+
 }
 
 
@@ -129,8 +130,6 @@ function modificarProducto() {
   borrarTabla();
   cargaInicial();
   
-  resetearFormulario();
-
   Swal.fire(
     'Producto modificado con exito',
 
