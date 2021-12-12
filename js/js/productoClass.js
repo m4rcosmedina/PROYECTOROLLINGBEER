@@ -6,7 +6,6 @@ export class Producto{
         this.cantidad = parametroCantidad;
         this.url = parametroUrl;
     }
-    //tarea agregar los get y set
     
     get mostrarCodigo() {
             return this.codigo;

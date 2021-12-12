@@ -32,7 +32,6 @@ if(validarGeneral(campoProducto,campoDescripcion,campoCantidad,campoUrl)){
 
 }
 function crearProducto(){
- console.log("esto si sale");
 let codigoUnico = generarCodigo();
 let productoNuevo= new Producto (codigoUnico,campoProducto.value,campoDescripcion.value,campoCantidad.value,
     campoUrl.value );
@@ -86,7 +85,6 @@ function cargaInicial(){
     } 
 }
 window.prepararEdicionProducto= function(codigo){
-    console.log("desea editar");
     let productoBuscado = listaProducto.find((itemProducto)=>{return itemProducto.codigo == codigo});
     console.log(productoBuscado);
     
@@ -100,7 +98,6 @@ window.prepararEdicionProducto= function(codigo){
 }
 
 function modificarProducto(){
-    console.log("desea modificar producto");
        let posicionObjetoBuscado = listaProducto.findIndex((itemProducto)=>{return itemProducto.codigo === campoCodigo.value});
        console.log(posicionObjetoBuscado);
        listaProducto[posicionObjetoBuscado].producto = campoProducto.value;

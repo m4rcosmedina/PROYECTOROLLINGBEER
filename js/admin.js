@@ -95,8 +95,6 @@ function crearFila(producto) {
 
 function cargaInicial() {
   if (listaLocalStorage.length > 0) {
-    //crear filas
-    //blucle  forEach()
     listaLocalStorage.forEach((storageProductos) => {
       crearFila(storageProductos)
     });
@@ -104,7 +102,6 @@ function cargaInicial() {
 }
 
 window.edicionProducto = function (codigo) {
-  //esto busca producto en arreglo y muesrta en formulario
   let codigoBuscado = listaLocalStorage.find((itemslocalstorage) => {
     return itemslocalstorage.codigo == codigo
   });
@@ -117,7 +114,6 @@ window.edicionProducto = function (codigo) {
 
 function modificarProducto() {
   console.log("desea modificar producto");
-  // encontrar la posicion del elemnto que quiero modificar dentro del arreglo de productos
   let posicionObjeto = listaLocalStorage.findIndex((itemproducto) => {
     return itemproducto.codigo == codigoForm.value
   })
@@ -129,15 +125,11 @@ function modificarProducto() {
   guardarLocals();
   borrarTabla();
   cargaInicial();
-  
+
   Swal.fire(
     'Producto modificado con exito',
-
   );
-
   resetearFormulario();
-
-
 }
 
 
@@ -165,8 +157,6 @@ window.borrarProducto = function (codigo) {
   cargaInicial();
   Swal.fire(
     'Producto eliminado',
-    'Al final no eras tan capo',
-    'success'
+    
   )
-
 }
