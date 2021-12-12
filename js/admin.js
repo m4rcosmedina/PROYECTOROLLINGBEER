@@ -148,3 +148,5 @@ window.borrarProducto = function (codigo) {
     'success'
   )
 }
+
+//buscador

@@ -158,3 +158,21 @@
  .tituloCard{
    font-weight:bold;
  }
+
+ /* buscador*/
+ input[type="search"]{
+	padding: 10px;
+	padding-right: 35px;
+	border: none;
+}
+
+
+@media all and (max-width: 576px) {
+  .cajaBusqueda{
+   
+    justify-content: start;
+  }
+}
+
+
+
