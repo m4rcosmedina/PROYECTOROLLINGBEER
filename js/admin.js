@@ -127,11 +127,8 @@ function modificarProducto() {
   listaLocalStorage[posicionObjeto].url = urlFrom.value;
   guardarLocals();
   borrarTabla();
-  crearFila(itemproducto);
   cargaInicial();
   
-  // let resetTabla = document.querySelector("#tablaproductos");
-  // resetTabla.innerHTML="";
   resetearFormulario();
 
   Swal.fire(
@@ -139,6 +136,7 @@ function modificarProducto() {
 
   );
 
+  resetearFormulario();
 
 
 }
