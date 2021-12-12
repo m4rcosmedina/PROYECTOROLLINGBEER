@@ -14,17 +14,12 @@ let urlFrom = document.querySelector("#url")
 let formularioProducto = document.querySelector("#formProducto")
 let listaLocalStorage = JSON.parse(localStorage.getItem("arregloProductosLS")) || [];
 let productoExistente = false;
-
-
-
-
 let numero;
 
 let codigoRandom = () => {
   numero = Math.floor(20 * Math.random()) + 1
   return numero;
 }
-
 let checkNumero = () => {
   codigoRandom();
   while (listaLocalStorage.forEach(codigo => {
@@ -35,10 +30,6 @@ let checkNumero = () => {
     }));
   return numero;
 }
-
-
-
-
 function guardarProducto(e) {
   e.preventDefault();
   if (validarGeneral(codigoForm, productoForm, descripcionForm, urlFrom)) {
@@ -58,16 +49,13 @@ function crearProducto() {
   crearFila(productoNuevo);
   Swal.fire(
     'Producto cargado con exito',
-
   );
 
 }
-
 function guardarLocals() {
   localStorage.setItem("arregloProductosLS", JSON.stringify(listaLocalStorage))
 
 }
-
 function resetearFormulario() {
   formularioProducto.reset();
   codigoForm.className = "form-control"
@@ -78,14 +66,12 @@ function resetearFormulario() {
 
 }
 
-
 function crearFila(producto) {
   let tablaProductoss = document.getElementById("tablaproductos")
   tablaProductoss.innerHTML += `<tr>
   <td>${producto.codigo}</td>
   <td>${producto.producto}</td>
-  <td>${producto.descripcion}</td>
-  
+  <td>${producto.descripcion}</td>  
   <td>
     <button class="btn btn-warning" onclick='edicionProducto("${producto.codigo}")'>Editar</button>
     <button class="btn btn-danger" onclick='borrarProducto("${producto.codigo}")'>Borrar</button>
@@ -134,14 +120,8 @@ function modificarProducto() {
     'Producto modificado con exito',
 
   );
-
   resetearFormulario();
-
-
 }
-
-
-
 productoForm.addEventListener("blur", () => campoRequerido(productoForm));
 descripcionForm.addEventListener("blur", () => campoRequerido(descripcionForm));
 urlFrom.addEventListener("blur", () => validarURL(urlFrom));
@@ -153,7 +133,6 @@ function borrarTabla() {
   let tbodyProductos = document.getElementById("tablaProductos");
   tbodyProductos.innerHTML = '';
 }
-
 window.borrarProducto = function (codigo) {
   console.log(codigo);
   let arregloNuevo = listaLocalStorage.filter((item) => {
@@ -168,5 +147,4 @@ window.borrarProducto = function (codigo) {
     'Al final no eras tan capo',
     'success'
   )
-
 }
