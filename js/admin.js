@@ -14,11 +14,9 @@ let urlFrom = document.querySelector("#url")
 let formularioProducto = document.querySelector("#formProducto")
 let listaLocalStorage = JSON.parse(localStorage.getItem("arregloProductosLS")) || [];
 let productoExistente = false;
+let btnNuevo = document.getElementById('btnNuevo')
 
-
-
-
-let numero;
+let numero
 
 let codigoRandom = () => {
   numero = Math.floor(20 * Math.random()) + 1
@@ -36,7 +34,16 @@ let checkNumero = () => {
   return numero;
 }
 
+productoForm.addEventListener("blur", () => { campoRequerido(productoForm)});
+descripcionForm.addEventListener("blur", () => {campoRequerido(descripcionForm)});
+urlFrom.addEventListener("blur", () => {validarURL(urlFrom)});
+codigoForm.value = checkNumero();
+formularioProducto.addEventListener("submit", guardarProducto);
 
+btnNuevo.addEventListener('click', resetearFormulario);
+
+
+cargaInicial();
 
 
 function guardarProducto(e) {
@@ -74,13 +81,13 @@ function resetearFormulario() {
   productoForm.className = "form-control"
   descripcionForm.className = "form-control"
   urlFrom.className = "form-control"
+  productoExistente = false;
   codigoForm.value = checkNumero();
-
 }
 
 
 function crearFila(producto) {
-  let tablaProductoss = document.getElementById("tablaproductos")
+  let tablaProductoss = document.getElementById("tablaProductos");
   tablaProductoss.innerHTML += `<tr>
   <td>${producto.codigo}</td>
   <td>${producto.producto}</td>
@@ -90,7 +97,7 @@ function crearFila(producto) {
     <button class="btn btn-warning" onclick='edicionProducto("${producto.codigo}")'>Editar</button>
     <button class="btn btn-danger" onclick='borrarProducto("${producto.codigo}")'>Borrar</button>
     </td>
-</tr>`
+</tr>`;
 }
 
 function cargaInicial() {
@@ -104,7 +111,7 @@ function cargaInicial() {
 window.edicionProducto = function (codigo) {
   let codigoBuscado = listaLocalStorage.find((itemslocalstorage) => {
     return itemslocalstorage.codigo == codigo
-  });
+  })
   codigoForm.value = codigoBuscado.codigo;
   productoForm.value = codigoBuscado.producto;
   descripcionForm.value = codigoBuscado.descripcion;
@@ -115,31 +122,21 @@ window.edicionProducto = function (codigo) {
 function modificarProducto() {
   console.log("desea modificar producto");
   let posicionObjeto = listaLocalStorage.findIndex((itemproducto) => {
-    return itemproducto.codigo == codigoForm.value
-  })
-  console.log(posicionObjeto)
+    return itemproducto.codigo === codigoForm.value
+  });
 
   listaLocalStorage[posicionObjeto].producto = productoForm.value;
   listaLocalStorage[posicionObjeto].descripcion = descripcionForm.value;
   listaLocalStorage[posicionObjeto].url = urlFrom.value;
+
   guardarLocals();
   borrarTabla();
   cargaInicial();
-
   Swal.fire(
     'Producto modificado con exito',
   );
   resetearFormulario();
 }
-
-
-
-productoForm.addEventListener("blur", () => campoRequerido(productoForm));
-descripcionForm.addEventListener("blur", () => campoRequerido(descripcionForm));
-urlFrom.addEventListener("blur", () => validarURL(urlFrom));
-codigoForm.value = checkNumero();
-formularioProducto.addEventListener("submit", guardarProducto);
-cargaInicial();
 
 function borrarTabla() {
   let tbodyProductos = document.getElementById("tablaProductos");
@@ -157,6 +154,5 @@ window.borrarProducto = function (codigo) {
   cargaInicial();
   Swal.fire(
     'Producto eliminado',
-    
   )
 }
